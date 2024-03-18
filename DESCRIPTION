@@ -1,7 +1,7 @@
 Package: OrbitR
 Title: Tracks and Visualizes Positions of Celestial Bodies
 Version: 0.0.0.9000
-Authors@R: 
+Authors@R: Sarah Boukernafa <work.SarahE@gmail.com>
 Description: This package provides tools to calculate, track, and visualize the positions of planets, moons, 
     and artificial satellites in real-time. Utilizing current astronomical algorithms and data, 
     OrbitR enables both enthusiasts and researchers to explore the dynamics of celestial bodies 
