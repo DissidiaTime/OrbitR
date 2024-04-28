@@ -1,0 +1,93 @@
+---
+title: "How to Use OrbitR"
+author: "Sarah Boukernafa"
+date: "2024-04-24"
+output: html_document
+---
+
+# Introduction
+
+### Welcome! The OrbitR package provides basic tools for illustrating and calculating celestial mechanics in R. Is designed to be educational, introducing users to the concepts of orbits, planetary information, and simple astronomical calculations using R!
+
+## Installation
+
+### You can install the development version of OrbitR from GitHub using the following code:
+
+```{r setup, include=TRUE}
+
+# install.packages("devtools")  #Uncomment this line if devtools is not installed
+
+# devtools::install_github("DissidiaTime/OrbitR")
+
+```
+
+## Loading the Package
+
+### Once installed, you can load the package using:
+
+```{r}
+
+library(OrbitR)
+
+```
+
+## Functions Overview
+
+### OrbitR includes several functions to help users understand basic celestial mechanics:
+
+    get_planet_info(): Retrieves basic information about a planet.
+    plot_orbit_simple(): Plots a simple circular orbit.
+    get_planet_position(): Calculates the position of a planet using Kepler's laws.
+
+## Getting Planet Information
+
+### The get_planet_info function provides basic data about planets in our solar system. Here's how to use it:
+
+```{r}
+mars_info <- get_planet_info("Mars")
+print(mars_info)
+
+```
+
+## Plotting a Simple Orbit
+
+### To illustrate the concept of orbits, plot_orbit_simple creates a simple circular plot which is representing an orbit with a specified radius:
+```{r}
+
+# Plots an orbit with a radius of 1 astronomical unit:
+plot_orbit_simple(1)
+
+```
+
+## Calculating Planet Position
+
+### The get_planet_position function uses Kepler's laws to calculate the position of a planet in its orbit:
+```{r}
+
+# Calculate and plot Earth's position in its orbit at a mean anomaly of 0 degrees
+earth_position <- get_planet_position(1, 0.0167, 0)
+print(earth_position)
+
+```
+
+## Example Use Case
+
+### Now lets use all the functions to visualize the data and orbit of Mars!:
+
+```{r}
+# Get information about Mars
+mars_info <- get_planet_info("Mars")
+print(mars_info)
+
+# Calculate Mars' position in its orbit
+mars_position <- get_planet_position(1.524, 0.0934, 45)  # Semi-major axis, eccentricity, and mean anomaly of Mars
+print(mars_position)
+
+# Visualize Mars' orbit
+plot_orbit_simple(1.524)
+
+```
+
+# Enjoy!
+
+### OrbitR serves as an introductory tool for understanding and visualizing basic concepts in celestial mechanics using R. It is suitable for educational purposes and works well in helping users learn about planetary data, orbits, and the application of Kepler's laws in a basic straightforward manner.
