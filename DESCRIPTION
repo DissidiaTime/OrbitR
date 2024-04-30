@@ -4,7 +4,7 @@ Version: 0.0.0.9000
 Authors@R: person("Sarah", "Boukernafa", email = "work.SarahE@gmail.com", role = c("aut", "cre"))
 Description: This package provides tools to calculate, track, and visualize the orbits, positions, and velocities of celestial bodies. OrbitR enables both enthusiasts and researchers to explore the dynamics of celestial bodies within our solar system and beyond!
 Depends: R (>= 4.0)
-Imports: dplyr, ggplot2
+Imports: dplyr, ggplot2, testthat, knitr, devtools
 License: CC0
 LazyData: true
 RoxygenNote: 7.3.1
