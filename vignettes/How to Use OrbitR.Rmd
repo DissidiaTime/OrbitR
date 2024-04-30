@@ -104,4 +104,4 @@ print(adjusted_earth_orbit)
 
 # Enjoy!
 
-### OrbitR serves as an introductory tool for understanding and visualizing basic concepts in celestial mechanics using R. It is suitable for educational purposes and works well in helping users learn about planetary data, orbits, and the application of Kepler's laws in a basic straightforward manner.
+### OrbitR serves as an introductory tool for understanding and visualizing basic concepts in celestial mechanics using R. Its well suitable for educational purposes and works well in helping users learn about planetary data, orbits, and the application of Kepler's laws in a basic straightforward manner.
