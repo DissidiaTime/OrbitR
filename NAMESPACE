@@ -3,3 +3,4 @@
 export(get_planet_info)
 export(get_planet_position)
 export(plot_orbit_simple)
+export(simulate_orbit_adjustments)
