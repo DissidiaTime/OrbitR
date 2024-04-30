@@ -52,10 +52,10 @@ print(mars_info)
 
 ## Plotting a Simple Orbit
 
-### To illustrate the concept of orbits, plot_orbit_simple creates a simple circular plot which is representing of an orbit of a planet of your choice:
+### To show the concept of orbits, plot_orbit_simple creates a simple circular plot which is representing of an orbit of a planet of your choice:
 ```{r}
 
-# Plots an orbit with a radius of 1 astronomical unit:
+# Plots an orbit with of any hcosen planet:
 plot_orbit_simple("Mars)
 
 ```
@@ -65,7 +65,7 @@ plot_orbit_simple("Mars)
 ### To calculate and print the current position of Mars in its orbit:
 ```{r}
 
-# Calculate and plot Earth's position in its orbit at a mean anomaly of 0 degrees
+# Calculate and plot Mars' position
 mars_position <- get_planet_position("Mars")
 print(mars_position)
 
