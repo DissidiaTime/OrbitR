@@ -1,21 +1,24 @@
-#' Get Basic Information about a Planet
+#' Get Information about a Planet
 #'
-#' This function returns simple data about planets in our solar system.
+#' Retrieves detailed data about a planet from the dataset including its name,
+#' distance from the Sun, and diameter.
 #'
-#' @param planet_name The name of the planet.
-#'
-#' @return A data frame with basic information about the planet.
-#'
+#' @param planet_name The name of the planet to retrieve information for.
+#' @return A data frame row containing the planet's details.
 #' @examples
 #' get_planet_info("Mars")
-#'
 #' @export
 get_planet_info <- function(planet_name) {
-  planets <- data.frame(
-    Name = c("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"),
-    Moons = c(0, 0, 1, 2, 79, 82, 27, 14),
-    Orbit_Days = c(88, 224.7, 365.2, 687, 4333, 10759, 30660, 60225)
-  )
-  info <- subset(planets, Name == planet_name)
-  return(info)
+  # Ensure the planet data is available
+  if(!exists("planets")) {
+    stop("The dataset 'planets' does not exist in the environment.")
+  }
+
+  # Check if the planet name is in the dataset
+  planet_data <- subset(planets, Name == planet_name)
+  if(nrow(planet_data) == 0) {
+    stop("Planet name not found in the dataset.")
+  }
+
+  return(planet_data)
 }
