@@ -84,19 +84,21 @@ print(adjusted_orbit)
 
 ## Example Use Case
 
-### Now lets use all the functions to visualize the data and orbit of Mars!:
+### Now lets use all the functions to visualize the data and orbit of Earth!:
 
 ```{r}
-# Get information about Mars
-mars_info <- get_planet_info("Mars")
-print(mars_info)
 
-# Calculate Mars' position in its orbit
-mars_position <- get_planet_position(1.524, 0.0934, 45)  # Semi-major axis, eccentricity, and mean anomaly of Mars
-print(mars_position)
+# Step 1: Load the Package
 
-# Visualize Mars' orbit
-plot_orbit_simple(1.524)
+# Ensure that the OrbitR package is loaded
+
+# Retrieve Earth data
+earth_info <- get_planet_info("Earth")
+print(earth_info)
+
+# Simulate a 10% increase in Earth's orbital velocity and observe the changes in orbital distanc!
+adjusted_earth_orbit <- simulate_orbit_adjustments(earth_info, "Earth", 1.1)
+print(adjusted_earth_orbit)
 
 ```
 
