@@ -35,9 +35,10 @@ library(OrbitR)
 
 ### OrbitR includes several functions to help users understand basic celestial mechanics:
 
-    get_planet_info(): Retrieves basic information about a planet.
-    plot_orbit_simple(): Plots a simple circular orbit.
-    get_planet_position(): Calculates the position of a planet using Kepler's laws.
+    get_planet_info(): Retrieves information about a specific planet.
+    plot_orbit_simple(): Visualizes a simple circular orbit for a given planet.
+    get_planet_position(): Calculates the current position of a planet in its orbit.
+    simulate_orbit_adjustments(): Simulates changes to a planet's orbit based on adjustments to its velocity.
 
 ## Getting Planet Information
 
@@ -51,7 +52,7 @@ print(mars_info)
 
 ## Plotting a Simple Orbit
 
-### To illustrate the concept of orbits, plot_orbit_simple creates a simple circular plot which is representing an orbit with a specified radius:
+### To illustrate the concept of orbits, plot_orbit_simple creates a simple circular plot which is representing of an orbit of a planet of your choice:
 ```{r}
 
 # Plots an orbit with a radius of 1 astronomical unit:
@@ -61,12 +62,23 @@ plot_orbit_simple("Mars)
 
 ## Calculating Planet Position
 
-### The get_planet_position function uses Kepler's laws to calculate the position of a planet in its orbit:
+### To calculate and print the current position of Mars in its orbit:
 ```{r}
 
 # Calculate and plot Earth's position in its orbit at a mean anomaly of 0 degrees
 mars_position <- get_planet_position("Mars")
 print(mars_position)
+
+```
+
+## Simulating Orbit Adjustments
+
+### Used to explore hypothetical changes in a planet's orbit caused by altering its velocity. Here's how to simulate an increase in Mars' velocity by 10%:
+```{r}
+
+# After loading the planets dataset
+adjusted_orbit <- simulate_orbit_adjustments(planets, "Mars", 1.1)
+print(adjusted_orbit)
 
 ```
 
