@@ -55,7 +55,7 @@ print(mars_info)
 ```{r}
 
 # Plots an orbit with a radius of 1 astronomical unit:
-plot_orbit_simple(1)
+plot_orbit_simple("Mars)
 
 ```
 
@@ -65,8 +65,8 @@ plot_orbit_simple(1)
 ```{r}
 
 # Calculate and plot Earth's position in its orbit at a mean anomaly of 0 degrees
-earth_position <- get_planet_position(1, 0.0167, 0)
-print(earth_position)
+mars_position <- get_planet_position("Mars")
+print(mars_position)
 
 ```
 
