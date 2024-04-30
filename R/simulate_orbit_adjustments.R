@@ -5,14 +5,18 @@
 #' affect the orbit distance of a planet around the sun.
 #'
 #' @param planet_data A data frame containing data about planets.
+#'
 #' @param planet_name The name of the planet to simulate.
+#'
 #' @param velocity_factor A numeric value representing the factor by which the
-#'        planet's velocity is to be increased or decreased.
+#' planet's velocity is to be increased or decreased.
 #'
 #' @return A data frame containing the original and adjusted orbit distances.
+#'
 #' @examples
 #' data(planets)
 #' simulate_orbit_adjustments(planets, "Earth", 1.1)
+#'
 #' @export
 simulate_orbit_adjustments <- function(planet_data, planet_name, velocity_factor) {
   # Check if the planet name is in the dataset
