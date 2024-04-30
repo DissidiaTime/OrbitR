@@ -2,23 +2,22 @@
 % Please edit documentation in R/get_planet_position.R
 \name{get_planet_position}
 \alias{get_planet_position}
-\title{Calculate Planet Position Using Kepler's Laws}
+\title{Calculate Theoretical Position of a Planet in Its Orbit}
 \usage{
-get_planet_position(semi_major_axis, eccentricity, anomaly)
+get_planet_position(planet_name)
 }
 \arguments{
-\item{semi_major_axis}{Semi-major axis of the planet's orbit in astronomical units.}
-
-\item{eccentricity}{Eccentricity of the orbit.}
-
-\item{anomaly}{Mean anomaly at a specific time in degrees.}
+\item{planet_name}{The name of the planet.}
 }
 \value{
-A list with x and y coordinates of the planet in its orbital plane.
+The x, y coordinates in the orbital plane.
 }
 \description{
-This function calculates the position of a planet based on Kepler's laws of planetary motion.
+This function calculates a simplified theoretical position of a planet based on its
+distance from the Sun assuming a circular orbit. This is purely illustrative and assumes
+the planet is at the '0 degrees' point at the time of calling.
 }
 \examples{
-get_planet_position(1, 0.0167, 0)  # Example for Earth
+get_planet_position("Earth")
 }
+
