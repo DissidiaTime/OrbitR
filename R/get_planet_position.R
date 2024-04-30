@@ -16,7 +16,7 @@ get_planet_position <- function(planet_name) {
   # Get thes planet information
   planet_info <- get_planet_info(planet_name)
   
-  # For a simplified model, calculate position at one point in time
+  # These calculations are a simplified model. For the sake of the educational purpose of the package, it works well.
   # Assuming the planet is at "0 degrees" in its orbit, directly at the x-axis distance
   x_position <- planet_info$DistanceFromSun
   y_position <- 0  # Since we assume it's at 0 degrees, the y position is 0
