@@ -2,16 +2,20 @@
 % Please edit documentation in R/plot_orbit_simple.R
 \name{plot_orbit_simple}
 \alias{plot_orbit_simple}
-\title{Plot a Simple Circular Orbit}
+\title{Plot a Simple Circular Orbit for a Planet}
 \usage{
-plot_orbit_simple(radius)
+plot_orbit_simple(planet_name)
 }
 \arguments{
-\item{radius}{The radius of the orbit.}
+\item{planet_name}{The name of the planet to plot the orbit for.}
+}
+\value{
+A plot showing the orbit of the planet.
 }
 \description{
-This function plots a simple circular orbit to illustrate the concept of orbits.
+Plots a simple circular orbit for a planet using its average distance from the Sun.
+The function assumes a perfectly circular orbit for visualization purposes.
 }
 \examples{
-plot_orbit_simple(1)
+plot_orbit_simple("Earth")
 }
