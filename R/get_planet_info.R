@@ -4,9 +4,12 @@
 #' distance from the Sun, and diameter.
 #'
 #' @param planet_name The name of the planet to retrieve information for.
+#'
 #' @return A data frame row containing the planet's details.
+#'
 #' @examples
 #' get_planet_info("Mars")
+#'
 #' @export
 get_planet_info <- function(planet_name) {
   # Ensure the planet data is available
