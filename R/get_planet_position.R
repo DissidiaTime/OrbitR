@@ -1,39 +1,27 @@
-#' Calculate Planet Position Using Kepler's Laws
+#' Calculate Theoretical Position of a Planet in Its Orbit
 #'
-#' This function calculates the position of a planet based on Kepler's laws of planetary motion.
+#' This function calculates a simplified theoretical position of a planet based on its
+#' distance from the Sun assuming a circular orbit. This is purely illustrative and assumes
+#' the planet is at the '0 degrees' point at the time of calling.
 #'
-#' @param semi_major_axis Semi-major axis of the planet's orbit in astronomical units.
+#' @param planet_name The name of the planet.
 #'
-#' @param eccentricity Eccentricity of the orbit.
-#'
-#' @param anomaly Mean anomaly at a specific time in degrees.
-#'
-#' @return A list with x and y coordinates of the planet in its orbital plane.
+#' @return The x, y coordinates in the orbital plane.
 #'
 #' @examples
-#' # Example for Earth
-#' get_planet_position(1, 0.0167, 0)
+#' get_planet_position("Earth")
 #'
 #' @export
-get_planet_position <- function(semi_major_axis, eccentricity, anomaly) {
-  # Convert anomaly from degrees to radians
-  M <- anomaly * pi / 180
-
-  # Solve Kepler's equation for eccentricc anomaly
-  E <- M
-  for (i in 1:10) {  # Iterative solution
-    E <- E - (E - eccentricity * sin(E) - M) / (1 - eccentricity * cos(E))
-  }
-
-  # Calculate the true anomaly
-  theta <- 2 * atan(sqrt((1 + eccentricity) / (1 - eccentricity)) * tan(E / 2))
-
-  # Calculate the distance from the Sun
-  r <- semi_major_axis * (1 - eccentricity * cos(E))
-
-  # Convert polar coordinates to Cartesian coordinates
-  x <- r * cos(theta)
-  y <- r * sin(theta)
-
-  return(list(x = x, y = y))
+get_planet_position <- function(planet_name) {
+  # Get thes planet information
+  planet_info <- get_planet_info(planet_name)
+  
+  # For a simplified model, calculate position at one point in time
+  # Assuming the planet is at "0 degrees" in its orbit, directly at the x-axis distance
+  x_position <- planet_info$DistanceFromSun
+  y_position <- 0  # Since we assume it's at 0 degrees, the y position is 0
+  
+  # Return as a named list
+  return(list(x = x_position, y = y_position))
 }
+
