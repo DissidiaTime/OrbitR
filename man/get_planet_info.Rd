@@ -2,18 +2,19 @@
 % Please edit documentation in R/get_planet_info.R
 \name{get_planet_info}
 \alias{get_planet_info}
-\title{Get Basic Information about a Planet}
+\title{Get Information about a Planet}
 \usage{
 get_planet_info(planet_name)
 }
 \arguments{
-\item{planet_name}{The name of the planet.}
+\item{planet_name}{The name of the planet to retrieve information for.}
 }
 \value{
-A data frame with basic information about the planet.
+A data frame row containing the planet's details.
 }
 \description{
-This function returns simple data about planets in our solar system.
+Retrieves detailed data about a planet from the dataset including its name,
+distance from the Sun, and diameter.
 }
 \examples{
 get_planet_info("Mars")
